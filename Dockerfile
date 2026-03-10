@@ -26,5 +26,6 @@ ENV DANGEROUSLY_OMIT_AUTH=true
 EXPOSE 3000
 
 # Run MCP server with HTTP transport for Coolify
+# --host 0.0.0.0 so Traefik/Coolify can reach the server (default 127.0.0.1 causes Bad Gateway)
 # Set FREEPIK_API_KEY in Coolify Environment Variables
-CMD uv run fastmcp run main.py --transport streamable-http --port ${PORT}
+CMD uv run fastmcp run main.py --transport streamable-http --host 0.0.0.0 --port ${PORT}
