@@ -1,0 +1,16 @@
+# Exclude from Docker build context (keep image small and secure)
+.venv/
+venv/
+.env
+.env.*
+.git/
+.gitignore
+*.md
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.pyc
+node_modules/
+.cursor/
+*.log
